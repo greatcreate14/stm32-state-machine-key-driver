@@ -83,7 +83,7 @@ Key_Process(&User_Key2);
 
 请参考下面的状态机图示，了解各状态之间的转换：
 
-![输入图片说明](Drawing%202025-01-29%2020.58.04.excalidraw.png)
+![示意图](Drawing%202025-01-29%2020.58.04.excalidraw.png = 200)
 
 ### 6. 示例代码
 
