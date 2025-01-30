@@ -92,6 +92,7 @@ Key_Process(&User_Key2);
 
 int main(void) {
     // 初始化按键
+    KEY_GPIO_Init();
     User_Key1_Key2_Init;
 
     // 主循环
