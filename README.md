@@ -36,10 +36,10 @@ KEY_GPIO_Init();
 
 ### 2. 按键初始化
 
-使用宏 `User_Key1_Key2_Init` 来初始化两个按键及其 GPIO 端口和引脚，并为单击、双击和长按事件设置默认回调函数：
+使用宏 `User_Key1_Key2_Init()` 来初始化两个按键及其 GPIO 端口和引脚，并为单击、双击和长按事件设置默认回调函数：
 
 ```c
-User_Key1_Key2_Init;
+User_Key1_Key2_Init();
 ```
 
 `Key_Init()` 函数会初始化按键的状态机并设置回调函数。例如：
@@ -69,7 +69,6 @@ Key_Process(&User_Key2);
 - `Key2_Double_Callback()`：按键 2 双击事件。
 - `Key2_Long_Callback()`：按键 2 长按事件。
 
-默认的回调函数会切换板载 LED 的状态（红色、绿色和蓝色）。
 
 ### 5. 状态机流程
 
@@ -92,8 +91,7 @@ Key_Process(&User_Key2);
 
 int main(void) {
     // 初始化按键
-    KEY_GPIO_Init();
-    User_Key1_Key2_Init;
+    User_Key1_Key2_Init();
 
     // 主循环
     while (1) {
@@ -109,7 +107,6 @@ int main(void) {
 ## 依赖
 
 - STM32 HAL 库
-- 自定义 LED 驱动（参见 `Bsp_LED`）
 
 ## 许可证
 
